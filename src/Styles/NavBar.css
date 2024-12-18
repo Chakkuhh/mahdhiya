@@ -7,7 +7,10 @@
   background-color: black;
   color: #fff;
   position: relative;
-  height: 70px;
+  height: 50%;
+  max-width: 100%; /* Ensure the navbar doesn't exceed screen width */
+  box-sizing: border-box; /* Include padding in width calculation */
+  overflow: hidden; /* Prevent overflow */
 }
 
 /* Logo and Text */
@@ -47,6 +50,8 @@
   justify-content: center;
   width: 100%;
   margin-left: auto; /* Push links to the right */
+  flex-wrap: wrap; /* Allow links to wrap on small screens */
+  padding: 0; /* Remove padding */
 }
 
 .nav-links li {
@@ -106,37 +111,42 @@
 }
 
 /* Responsive Design */
+/* Adjust Navbar for Mobile View */
 @media screen and (max-width: 768px) {
-  /* Show the Hamburger Menu */
-  .menu-icon {
-    display: block;
+  .main-navbar {
+    flex-wrap: wrap; /* Allow content to wrap */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+    height: auto; /* Allow the navbar height to expand */
   }
 
-  /* Hide the navigation links by default */
+  /* Logo Adjustments */
+  .main-navbar .logo img {
+    height: 40px; /* Reduce logo size for mobile */
+    margin-right: 10px; /* Reduce spacing between logo and text */
+  }
+
+  .main-navbar .logo div {
+    font-size: 14px; /* Reduce text size for logo */
+  }
+
+  /* Navigation Links */
   .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #1c1c1c;
-    flex-direction: column;
-    text-align: center;
-    display: none;
-    padding: 20px 0;
-  }
-
-  /* Show links when active */
-  .nav-links.nav-active {
-    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap if needed */
+    justify-content: center; /* Center links for better alignment */
+    padding: 0; /* Remove padding to avoid breaking */
   }
 
   .nav-links li {
-    margin: 10px 0;
+    font-size: 14px; /* Reduce font size */
+    margin: 5px 10px; /* Adjust spacing between links */
+    padding: 5px; /* Reduce padding for links */
   }
 
-  /* Center the Get In Touch Button */
+  /* Button Adjustment */
   .btn-get-in-touch {
-    display: block;
-    margin: 15px auto;
+    width: 100%; /* Make the button take full width on mobile */
+    max-width: 200px; /* Set a maximum width */
+    margin: 10px auto; /* Center the button */
+    font-size: 14px; /* Adjust font size */
   }
 }

@@ -86,3 +86,36 @@
         opacity: 1;
     }
 }
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .sustain {
+        flex-direction: column; /* Stack text and image vertically */
+        padding: 20px; /* Reduce padding */
+        min-height: auto; /* Allow height to adjust based on content */
+    }
+
+    .sustain-text, .sustain-img {
+        flex: none;
+        width: 100%;
+        height: auto; /* Allow height to adjust naturally */
+    }
+
+    .sustain-img img {
+        width: 100%; /* Ensure the image width takes the full container width */
+        height: 100%; /* Ensure the image height takes the full container height */
+        object-fit: cover; /* Preserve the aspect ratio */
+    }
+
+    .sustain-text {
+        text-align: center; /* Center the text on mobile */
+    }
+
+    .sustain-text h4 {
+        font-size: 2rem; /* Reduce font size for mobile */
+    }
+
+    .sustain-text p {
+        font-size: 1rem; /* Adjust font size */
+    }
+}
