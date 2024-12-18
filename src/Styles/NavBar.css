@@ -1,0 +1,142 @@
+/* Main Navbar */
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: black;
+  color: #fff;
+  position: relative;
+  height: 70px;
+}
+
+/* Logo and Text */
+.main-navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.main-navbar .logo img {
+  height: 50px; /* Adjust logo size */
+  margin-right: 15px; /* Space between logo and text */
+}
+
+.main-navbar .logo div {
+  color: white;
+  text-align: left;
+}
+
+.main-navbar .logo p {
+  color: blue;
+  font-size: 12px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.main-navbar .logo h3 {
+  font-size: 15px;
+  margin: 0;
+  font-weight: bold;
+  color: #ec0830;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-left: auto; /* Push links to the right */
+}
+
+.nav-links li {
+  color: red;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 10px; /* Add some padding for better hover effect */
+  position: relative; /* To position the background properly */
+}
+
+.nav-links li::before {
+  content: ''; /* Creates an empty pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  z-index: -1; /* Makes sure the background appears behind the text */
+  transition: background-color 0.3s ease;
+  height: 0; /* Starts with no height */
+}
+
+.nav-links li:hover::before {
+  height: 100%; /* Expands the background to full height on hover */
+}
+
+.nav-links li:hover {
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  color: #0e0a66;
+}
+
+/* Call-to-Action Button */
+.btn-get-in-touch {
+  background-color: #f5b400;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-get-in-touch:hover {
+  background-color: #ffcc33;
+}
+
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f5b400;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* Show the Hamburger Menu */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide the navigation links by default */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1c1c1c;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  /* Show links when active */
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  /* Center the Get In Touch Button */
+  .btn-get-in-touch {
+    display: block;
+    margin: 15px auto;
+  }
+}

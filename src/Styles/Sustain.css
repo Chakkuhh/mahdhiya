@@ -1,0 +1,88 @@
+.sustain {
+    margin-top: 20px;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    gap: 30px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #e8f4ff, #f4f8ff); /* Soft gradient */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.sustain.fade-in {
+    opacity: 1; /* Fade-in effect */
+}
+
+.sustain-text {
+    flex: 1;
+    animation: slideLeft 1s ease-out;
+    text-align: left; /* Align text to the left */
+    color: #1c2a46; /* Modern dark blue for text */
+    font-family: 'Poppins', Arial, sans-serif; /* Clean font */
+}
+
+.sustain-text h6 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #004080; /* Deep blue tone */
+    margin-bottom: 10px;
+}
+
+.sustain-text h4 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #0d1b2a;
+}
+
+.sustain-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 90%;
+    color: #333;
+}
+
+.sustain-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideRight 1s ease-out;
+}
+
+.sustain-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes slideLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

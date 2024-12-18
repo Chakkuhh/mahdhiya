@@ -1,0 +1,147 @@
+/* General Styles */
+.exp-heading {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.exp-heading h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d71010;
+    margin-bottom: 10px;
+}
+
+.exp-heading p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.exp-mod {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0 auto; /* Center the grid */
+    justify-content: center; /* Horizontally center the grid */
+    align-items: center; /* Vertically center the grid */
+    max-width: 1200px; /* Optional: To limit the width of the grid */
+}
+
+.exp-image-content {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    width: 80%; /* Set width to make it more compact */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.exp-image-content:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0; /* Slight color change on hover */
+}
+
+.exp-image-content img {
+    width: 220px;
+    height: 60%; /* Adjust image height to fit better within the rectangular box */
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth scaling effect for images */
+}
+
+.exp-image-content:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.exp-image-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+    transition: color 0.3s ease; /* Text color transition */
+}
+
+.exp-image-content:hover h3 {
+    color: #555; /* Change color on hover */
+}
+
+.exp-image-content p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px;
+    margin: 10px 0; /* Adjusted margin to avoid cutting off text */
+    flex-grow: 1; /* Allow the text section to grow and prevent clipping */
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.exp-image-content:hover p {
+    color: #444; /* Slightly darker text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .exp-heading h1 {
+        font-size: 2rem;
+    }
+
+    .exp-heading p {
+        font-size: 1rem;
+    }
+
+    .exp-mod {
+        padding: 0 10px;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    }
+
+    .exp-image-content {
+        padding: 20px;
+        width: 90%; /* Adjust width on smaller screens */
+    }
+
+    .exp-image-content img {
+        height: 60%; /* Image height adjustment for mobile */
+    }
+
+    .exp-image-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .exp-image-content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp-heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .exp-heading p {
+        font-size: 0.9rem;
+    }
+
+    .exp-mod {
+        padding: 0 5px;
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+
+    .exp-image-content img {
+        height: 180px; /* Image height adjustment for small screens */
+    }
+
+    .exp-image-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .exp-image-content p {
+        font-size: 0.8rem;
+    }
+}
