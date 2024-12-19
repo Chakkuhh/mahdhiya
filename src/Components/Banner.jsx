@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import industry from '../Assets/industry1.jpg';
+import industry from '../Assets/ind-adjus.jpg';
 import worker from '../Assets/worker.jpg';
+import screw from '../Assets/ind-adj2.jpg'
 import '../Styles/Home.css'
 
 function Banner() {
@@ -25,7 +26,7 @@ function Banner() {
       ],
     },
     {
-      img: worker,
+      img: screw,
       title: 'Your comfort is our top priority',
       headline: (
         <>

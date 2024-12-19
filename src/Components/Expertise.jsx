@@ -5,15 +5,16 @@ import hvac1 from '../Assets/hvac1.jpg';
 import hvac2 from '../Assets/hvac2.jpg';
 import hvac3 from '../Assets/hvac3.jpg';
 import hvac4 from '../Assets/hvac4.jpg';
-import hvac5 from '../Assets/hvac5.jpg';
-import hvac6 from '../Assets/hvac6.jpg';
+import hvac5 from '../Assets/hvac-renov.jpg';
+import hvac6 from '../Assets/compress.jpg';
+
 
 
 function Expertise() {
   return (
-    <div style={{fontFamily:"Georgia, serif"}}>
+    <div >
       <div className='exp-heading'>
-        <h1>Expertise Across Multiple Industries</h1>
+        <h1>EXPERTISE ACROSS MULTIPLE INDUSTRIES</h1>
         <p>Ensure that customer needs and expectations are determined and fulfilled with the aim of achieving customer satisfaction through over best practices.</p>
       </div>
       <div className='exp-mod'>
@@ -23,7 +24,7 @@ function Expertise() {
           <p>Keep your HVAC systems efficient and reliable with our expert maintenance services, ensuring minimal downtime, optimal performance, and year-round comfort.</p>
         </div>
         <div className="exp-image-content">
-          <img src={hvac2} alt="HVAC Renovation Work" />
+          <img src={hvac5} alt="HVAC Renovation Work" />
           <h3>HVAC Renovation Work and Project</h3>
           <p>Upgrade and optimize your HVAC systems with our expert renovation services, tailored for enhanced efficiency and performance in any project.</p>
         </div>
@@ -38,12 +39,12 @@ function Expertise() {
           <p>Expert solutions for air-cooled chillers, ensuring efficient cooling, reliable performance, and extended equipment lifespan.</p>
         </div>
         <div className="exp-image-content">
-          <img src={hvac6} alt="AC Installation & Maintenance" />
+          <img src={hvac2} alt="AC Installation & Maintenance" />
           <h3>AC Installation & Maintenance</h3>
           <p>Professional AC installation and maintenance services to ensure optimal cooling, energy efficiency, and long-term reliability.</p>
         </div>
         <div className="exp-image-content">
-          <img src={hvac5} alt="Electrical Motor Repairs" />
+          <img src={hvac6} alt="Electrical Motor Repairs" />
           <h3>Electrical Motor Repairs & Services</h3>
           <p>Expert repair and maintenance for electrical motors, ensuring efficiency, reliability, and extended operational life.</p>
         </div>
