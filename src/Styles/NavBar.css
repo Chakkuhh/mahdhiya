@@ -73,7 +73,10 @@
   padding: 10px; /* Add some padding for better hover effect */
   position: relative; /* To position the background properly */
 }
-
+.nav-links a {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Optional: Inherit the text color */
+}
 .nav-links li::before {
   content: ''; /* Creates an empty pseudo-element */
   position: absolute;
@@ -81,7 +84,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0);
   z-index: -1; /* Makes sure the background appears behind the text */
   transition: background-color 0.3s ease;
   height: 0; /* Starts with no height */
@@ -93,7 +96,7 @@
 
 .nav-links li:hover {
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: red;
   color: #0e0a66;
 }

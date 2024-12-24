@@ -1,0 +1,306 @@
+body {
+    margin-top: -20px;
+}
+
+/* HVAC Section */
+.about-container {
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Full viewport height for a banner effect */
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: rgba(103, 202, 252, 0.66);
+}
+
+.about-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(20%);
+    z-index: 1;
+    border-radius: 0;
+}
+
+.about-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-in-out; /* Animation on load */
+}
+
+.about-text h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .about-text h1 {
+        font-size: 2rem;
+    }
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+.about-company {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .about-images {
+    position: relative; /* Establishes a positioning context for the text */
+    display: inline-block; /* Ensures the container wraps around the image */
+  }
+  
+  .about-images img {
+    display: block; /* Removes default inline spacing */
+    width: 100%; /* Ensures the image scales responsively */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+  }
+  
+  .about-images p {
+    position: absolute; /* Enables absolute positioning relative to the parent */
+    top: 50%; /* Moves the text 50% down the parent's height */
+    left: 50%; /* Moves the text 50% right of the parent's width */
+    transform: translate(-50%, -50%); /* Centers the text exactly in the middle */
+    color: white; /* Makes the text visible */
+    background: rgb(86 171 255 / 95%); /* Optional: Adds a semi-transparent background */
+    padding: 10px 20px; /* Adds padding around the text */
+    border-radius: 5px; /* Rounds the background corners */
+    font-size: 1.5em; /* Adjusts the font size */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers the text inside the box */
+  }
+  
+  
+  .about-content-text {
+    flex: 2; /* Maintains proportional layout if part of a flexbox */
+    padding: 20px; /* Adds spacing inside the container */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 10px; /* Rounds the container edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
+  
+  .about-content-text h3 {
+    text-align: center; /* Centers the heading */
+    margin-bottom: 20px; /* Adds spacing below the heading */
+    font-size: 2em; /* Makes the heading prominent */
+    color: #170b48; /* Slightly darker for emphasis */
+    font-weight: 700; /* Ensures a bold font weight */
+    text-transform: uppercase; /* Makes the text all caps for importance */
+    letter-spacing: 2px; /* Adds spacing between letters for a modern look */
+    animation: fadeIn 1.5s ease; /* Adds a smooth fade-in animation */
+  }
+  
+  .about-content-text p {
+    line-height: 1.8; /* Improves text readability */
+    color: #444; /* Slightly darker text for better visibility */
+    margin-bottom: 15px; /* Adds more spacing between paragraphs */
+    font-size: 1.1em; /* Slightly increases text size */
+    text-align: justify; /* Aligns text neatly on both sides */
+  }
+  
+  /* Optional: Adding hover effect for better interactivity */
+  .about-content-text:hover {
+    transform: scale(1.02); /* Slight zoom-in effect */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .about-simple-content {
+    width: 100%;
+    padding: 20px; /* Adds space inside the container */
+    margin: 20px auto; /* Centers the container and adds vertical spacing */
+    background-color: #f4f4f4; /* Light background for contrast */
+    border-radius: 8px; /* Rounds the edges */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    max-width: 95%; /* Restricts the width for better readability */
+  }
+  
+  .about-simple-content p {
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.1em; /* Slightly larger text for readability */
+    line-height: 1.8; /* Improves line spacing */
+    color: #000000; /* Neutral text color */
+    text-align: justify; /* Aligns text neatly on both sides */
+    margin: 0; /* Removes default paragraph margin */
+  }
+  .second-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #f8f9fa;
+}
+
+.left {
+    width: 65%;
+    height: auto; /* Ensures height adjusts to content */
+    max-height: 600px; /* Set a maximum height to control size */
+    overflow-y: auto; /* Adds scrolling if content exceeds the max height */
+    padding: 20px; /* Adjust padding as needed */
+    margin-bottom: 20px; /* Reduce margin to minimize height impact */
+    background-color: #f8f9fa; /* Optional: Define a background color for visibility */
+}
+
+
+.right {
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and Paragraph */
+.techni h1 {
+    font-size: 2.5rem;
+    color: #1d3557;
+    margin-bottom: 20px;
+}
+
+.techni p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+/* Mission, Vision, and Philosophy Section */
+.thdivs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.thdivs div {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.thdivs h3 {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.thdivs p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+/* Buttons */
+.buttoons {
+    margin: auto;
+    margin-top: 30px;
+}
+
+
+.buttoons button {
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #000000;
+    background-color: #0077b6;
+    border: none;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.buttoons .estimate{
+    border: 1px solid yellow;
+    background-color: transparent;
+}
+.buttoons .estimate:hover{
+    background-color: yellow;
+}
+.buttoons button:hover {
+    background-color: #005f87;
+}
+
+/* Right Section */
+.right{
+    margin: auto;
+}
+.right img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.right h3 {
+    font-size: 1.5rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.right p {
+    font-size: 1.1rem;
+    color: #495057;
+}
+.right span{
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .second-div {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .thdivs {
+        flex-direction: column;
+    }
+}
+
+  
+  
+  

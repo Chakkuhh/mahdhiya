@@ -1,4 +1,9 @@
 /* General container styling */
+/* Removes underline from all <a> elements rendered by Link */
+a {
+    text-decoration: none;
+  }
+  
 .exp-heading {
     text-align: center;
     margin: 40px 0;

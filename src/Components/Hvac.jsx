@@ -83,7 +83,7 @@ function Hvac() {
           activeSection === section.title ? (
             <div className="hvac-disc" key={index}>
               <img src={section.image} alt={section.title} />
-              <div className="hvac-text">
+              <div className="hvac-test">
                 <h5>{section.title}</h5>
                 <p dangerouslySetInnerHTML={{ __html: section.content.replace(/\n/g, '<br>') }} />
                 {section.title === 'Chilled Water Pipe line and Plumbing work' && (

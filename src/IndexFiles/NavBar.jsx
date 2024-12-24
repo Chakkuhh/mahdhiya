@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../Styles/NavBar.css";
 import logo from '../Assets/mahdiya-logo.png';
+import { Link } from "react-router-dom";
 
 function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -30,30 +31,32 @@ function NavBar() {
 
     return (
         <nav className={`main-navbar ${scrolling ? "scrolled" : ""}`}>
-            <div className="logo">
-                <img src={logo} alt="logos" />
-                {/* <div>
-                    <p>محدية تتخدمات الفنية (ش.ذ.م.م )</p>
-                    <h3>MAHDIYA TECHNICAL SERVICES L.L.C</h3>
-                </div> */}
-            </div>
+    <div className="logo">
+        <img src={logo} alt="logos" />
+    </div>
 
-            {/* Hamburger Menu Icon (for mobile) */}
-            <div className="menu-icon" onClick={toggleMenu}>
-                {menuOpen ? <FaTimes /> : <FaBars />}
-            </div>
+    {/* Hamburger Menu Icon (for mobile) */}
+    <div className="menu-icon" onClick={toggleMenu}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+    </div>
 
-            {/* Navigation Links */}
-            <ul className={`nav-links ${menuOpen ? "nav-active" : ""}`}>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Services</li>
-                <li>Portfolio</li>
-            </ul>
+    {/* Navigation Links */}
+    <ul className={`nav-links ${menuOpen ? "nav-active" : ""}`}>
+        <Link to='/home'><li>Home</li></Link> 
+            
+        <li className="dropdown">Services </li>
+        <li><Link to="/portfolio">Portfolio</Link></li>
+        <Link to='/About'><li>About Us</li></Link>
+        
+        {/* Services dropdown */}
+        
 
-            {/* Call-to-Action Button */}
-            <button className="btn-get-in-touch">GET IN TOUCH</button>
-        </nav>
+        
+    </ul>
+
+    {/* Call-to-Action Button */}
+    <Link to='/contact'><button className="btn-get-in-touch">Contact Us</button></Link>
+</nav>
     );
 }
 

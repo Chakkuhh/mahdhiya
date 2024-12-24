@@ -98,11 +98,11 @@
   border-radius: 8px;
 }
 
-.hvac-text {
+.hvac-test {
   flex: 1;
 }
 
-.hvac-text h5 {
+.hvac-test h5 {
   font-size: 2rem;
   font-weight: 500;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -110,14 +110,14 @@
   margin-bottom: 20px;
 }
 
-.hvac-text p {
+.hvac-test p {
   font-size: 1.1rem;
-  color: #b11515;
+  color: #000000;
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
-.hvac-text button {
+.hvac-test button {
   background-color: #ffcd00;
   border: none;
   padding: 12px 20px;
@@ -129,7 +129,7 @@
   transition: background-color 0.3s ease;
 }
 
-.hvac-text button:hover {
+.hvac-test button:hover {
   background-color: #e6b800;
 }
 
@@ -154,11 +154,11 @@
     margin-bottom: 20px;
   }
 
-  .hvac-text h5 {
+  .hvac-test h5 {
     font-size: 1.8rem;
   }
 
-  .hvac-text p {
+  .hvac-test p {
     font-size: 1rem;
   }
 }
