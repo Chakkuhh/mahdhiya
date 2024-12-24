@@ -42,7 +42,7 @@ function NavBar() {
 
     {/* Navigation Links */}
     <ul className={`nav-links ${menuOpen ? "nav-active" : ""}`}>
-        <Link to='/home'><li>Home</li></Link> 
+        <Link to='/'><li>Home</li></Link> 
             
         <li className="dropdown">Services </li>
         <li><Link to="/portfolio">Portfolio</Link></li>

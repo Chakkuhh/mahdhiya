@@ -20,7 +20,7 @@ function App() {
     <Router>
     <NavBar />
     <Routes>
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path='/home/hvacPre' element={<HvacPrev/>}/>
       <Route path='/home/hvacReno' element={<HvacReno/>}/>
       <Route path='/home/compressor' element={<Compressor/>}/>
