@@ -4,6 +4,10 @@ import hvac from '../../src/Assets/telephone.jpg';
 import Footer from '../Components/Footer';
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
+
 function Contact() {
   return (
     <div>
@@ -61,6 +65,23 @@ function Contact() {
           </div>
         </div>
       </div>
+      <div className="social-med">
+      <p>Follow Us Socially</p>
+      <div className="icons">
+        <div className="icon-wrapper">
+          <FaSquareXTwitter />
+          <span>Twitter</span>
+        </div>
+        <div className="icon-wrapper">
+          <FaFacebook />
+          <span>Facebook</span>
+        </div>
+        <div className="icon-wrapper">
+          <FaInstagramSquare />
+          <span>Instagram</span>
+        </div>
+      </div>
+    </div>
       <Footer/>
     </div>
   )

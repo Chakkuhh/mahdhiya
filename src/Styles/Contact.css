@@ -221,3 +221,78 @@ body {
         width: 100%;
     }
 }
+.social-med {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color */
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .social-med p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333; /* Text color */
+  }
+  
+  .social-med .icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  
+  .social-med .icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .social-med .icon-wrapper:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  }
+  
+  .social-med .icons svg {
+    font-size: 40px; /* Size of icons */
+    color: #0077b5; /* Default icon color */
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-med .icon-wrapper:hover svg {
+    color: #e63946; /* Change color on hover (red) */
+  }
+  
+  .social-med .icon-wrapper span {
+    font-size: 14px; /* Font size for social app names */
+    margin-top: 8px;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .social-med .icon-wrapper:hover span {
+    color: #333; /* Darker color on hover */
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .social-med {
+      padding: 15px 10px;
+    }
+  
+    .social-med p {
+      font-size: 18px; /* Slightly smaller text */
+    }
+  
+    .social-med .icons svg {
+      font-size: 35px; /* Smaller icons */
+    }
+  }
+  

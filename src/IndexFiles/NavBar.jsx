@@ -1,63 +1,50 @@
-import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useEffect } from "react";
 import "../Styles/NavBar.css";
 import logo from '../Assets/mahdiya-logo.png';
 import { Link } from "react-router-dom";
 
 function NavBar() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [scrolling, setScrolling] = useState(false);
-
-    // Function to toggle menu on mobile
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    // Function to handle scroll event
+  useEffect(() => {
     const handleScroll = () => {
-        if (window.scrollY > 50) {
-            setScrolling(true);
-        } else {
-            setScrolling(false);
-        }
+      const nav = document.querySelector("nav");
+      if (window.scrollY > 50) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
     };
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    return (
-        <nav className={`main-navbar ${scrolling ? "scrolled" : ""}`}>
-    <div className="logo">
-        <img src={logo} alt="logos" />
-    </div>
-
-    {/* Hamburger Menu Icon (for mobile) */}
-    <div className="menu-icon" onClick={toggleMenu}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-    </div>
-
-    {/* Navigation Links */}
-    <ul className={`nav-links ${menuOpen ? "nav-active" : ""}`}>
-        <Link to='/'><li>Home</li></Link> 
-            
-        <li className="dropdown">Services </li>
+  return (
+    <nav>
+      <div className="logo">
+        <Link to="/">
+          <img src={logo} alt="Mahdiya Logo" />
+        </Link>
+      </div>
+      <ul>
+        <li><Link to="/" className="active">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li>
+          <Link to="#" className="desktop-item">Services</Link>
+          <ul className="dropdown-menu">
+            <li><Link to="/home/hvacPre">HVAC SERVICES</Link></li>
+            <li><Link to="/home/hvacReno">HVAC RENOVATION</Link></li>
+            <li><Link to="/home/compressor">COMPRESSOR OVERHAULING</Link></li>
+            <li><Link to="/home/aircooler">AIR COOLED CHILLER</Link></li>
+            <li><Link to="/home/aircondition">AC INSTALLATION</Link></li>
+            <li><Link to="/home/motor">ELECTRIC MOTOR REPAIR</Link></li>
+          </ul>
+        </li>
         <li><Link to="/portfolio">Portfolio</Link></li>
-        <Link to='/About'><li>About Us</li></Link>
-        
-        {/* Services dropdown */}
-        
-
-        
-    </ul>
-
-    {/* Call-to-Action Button */}
-    <Link to='/contact'><button className="btn-get-in-touch">Contact Us</button></Link>
-</nav>
-    );
+        <li><Link to="/contact">Contact</Link></li>
+      </ul>
+      <Link to="/get-in-touch" className="btn">GET IN TOUCH</Link>
+    </nav>
+  );
 }
 
 export default NavBar;
